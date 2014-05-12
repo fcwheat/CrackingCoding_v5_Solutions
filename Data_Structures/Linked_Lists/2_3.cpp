@@ -47,5 +47,7 @@ int main()
   std::cout << "The new list is: ";
   myList->display();
 
+  delete myList;
+
   return 0;
 }
