@@ -21,25 +21,20 @@ LinkedList::~LinkedList()
 
 void LinkedList::insert(int value)
 {
-  Node* temp;
 
   if (head == NULL)
   {
     head = new Node();
+    tail = head;
     head->next = NULL;
     head->data = value;
   }
   else
   {
-    temp = head;
-    while (temp->next != NULL)
-    {
-      temp = temp->next;
-    }
-    temp->next = new Node();
-    temp = temp->next;
-    temp->data = value;
-    temp->next = NULL;
+    tail->next = new Node();
+    tail = tail->next;
+    tail->data = value;
+    tail->next = NULL;
   }
 
 }

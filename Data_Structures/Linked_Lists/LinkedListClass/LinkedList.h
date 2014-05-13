@@ -15,6 +15,9 @@ class LinkedList {
     ~LinkedList();
     void display();
     void insert(int value);
+  private:
+    // added this so insertion is O(1) time
+    Node* tail;
 
 }; 
 
