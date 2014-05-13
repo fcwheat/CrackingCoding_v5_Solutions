@@ -39,6 +39,11 @@ void LinkedList::insert(int value)
 
 }
 
+void LinkedList::createCycle()
+{
+  tail->next = head->next;  
+}
+
 void LinkedList::display()
 {
   Node* temp;
